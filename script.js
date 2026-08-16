@@ -43,13 +43,20 @@
       "home.encryptedBackups": "加密备份",
       "home.screensTitle": "清晰的工作区，<br /><em>把复杂藏起来。</em>",
       "home.screensEyebrow": "为产品而生的空间",
-      "home.screensLede": "看看已解锁的工作区、已锁定的保险箱和安全偏好设置。",
+      "home.screensLede": "左右滑动或滚动查看已解锁的工作区、已锁定的保险箱和安全偏好设置。",
       "home.slotWorkspace": "已解锁工作区",
       "home.slotLocked": "已锁定保险箱",
       "home.slotPreferences": "偏好设置",
+      "home.screensGalleryLabel": "产品截图",
       "home.screenshotWorkspaceAlt": "Cobolt 已解锁工作区，显示受保护文件和文件操作菜单",
       "home.screenshotLockedAlt": "Cobolt 已锁定的保险箱和解锁操作",
       "home.screenshotPreferencesAlt": "Cobolt 偏好设置，包含 Touch ID、加密备份、临时副本和 recovery key",
+      "home.zoomWorkspace": "放大已解锁工作区截图",
+      "home.zoomLocked": "放大锁定保险箱截图",
+      "home.zoomPreferences": "放大偏好设置截图",
+      "home.viewLarge": "查看大图 ↗",
+      "home.screenshotPreviewTitle": "截图预览",
+      "home.closeScreenshot": "关闭截图预览",
       "home.processTitle": "从放进去，<br /><em>到放心关上。</em>",
       "home.processEyebrow": "安静的三步",
       "home.stepCreateTitle": "创建保险箱",
@@ -272,6 +279,45 @@
   if (toggle) {
     toggle.addEventListener("click", () => {
       applyLanguage(document.documentElement.lang === "zh-CN" ? "en" : "zh");
+    });
+  }
+
+  const lightbox = document.querySelector("#screenshot-lightbox");
+  const lightboxImage = document.querySelector("#screenshot-lightbox-image");
+  const lightboxClose = lightbox ? lightbox.querySelector(".screenshot-lightbox-close") : null;
+  let lastScreenshotTrigger = null;
+
+  function closeScreenshotLightbox() {
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    document.body.classList.remove("lightbox-open");
+    if (lightboxImage) {
+      lightboxImage.removeAttribute("src");
+      lightboxImage.removeAttribute("alt");
+    }
+    if (lastScreenshotTrigger) lastScreenshotTrigger.focus();
+  }
+
+  if (lightbox && lightboxImage) {
+    document.querySelectorAll(".screenshot-zoom").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const image = trigger.querySelector("img");
+        if (!image) return;
+        lastScreenshotTrigger = trigger;
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.hidden = false;
+        document.body.classList.add("lightbox-open");
+        if (lightboxClose) lightboxClose.focus();
+      });
+    });
+
+    lightbox.querySelectorAll("[data-lightbox-close]").forEach((closeButton) => {
+      closeButton.addEventListener("click", closeScreenshotLightbox);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeScreenshotLightbox();
     });
   }
 

@@ -22,7 +22,7 @@ Then open <http://localhost:4173/>.
 
 ## Product screenshots
 
-The homepage uses three English app captures from `../vault_screenshot/en/`: the unlocked workspace, locked vault, and security preferences. They are resized to 1600px wide and encoded as WebP (quality 82) in `assets/screenshots/` so the page stays quick to load. Replace those files only when refreshed captures are available, and keep the descriptive `alt` text in `index.html`.
+The homepage uses three English app captures from `../vault_screenshot/en/`: the unlocked workspace, locked vault, and security preferences. They are resized to 1600px wide and encoded as WebP (quality 82) in `assets/screenshots/` so the page stays quick to load. The captures sit in a horizontal scroll rail and open into a larger lightbox preview when clicked. Replace those files only when refreshed captures are available, and keep the descriptive `alt` text in `index.html`.
 
 ## Product claims used on this site
 
