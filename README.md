@@ -20,18 +20,12 @@ Then open <http://localhost:4173/>.
 - Privacy: <https://hvntonight.github.io/COBOLT/privacy/>
 - Support: <https://hvntonight.github.io/COBOLT/support/>
 
-## Replacing the screenshot placeholders
+## Product screenshots
 
-The three cards in `index.html` use `.screenshot-slot` as intentional placeholders. When final captures are ready, replace each card's contents with an image, for example:
-
-```html
-<img src="assets/screenshot-workspace.png" alt="Cobolt unlocked workspace" />
-```
-
-Add the image to `assets/`, keep the `alt` text descriptive, and preserve the surrounding card classes for the responsive layout.
+The homepage uses three English app captures from `../vault_screenshot/en/`: the unlocked workspace, locked vault, and security preferences. They are resized to 1600px wide and encoded as WebP (quality 82) in `assets/screenshots/` so the page stays quick to load. Replace those files only when refreshed captures are available, and keep the descriptive `alt` text in `index.html`.
 
 ## Product claims used on this site
 
-The copy is based on the Cobolt source and design handoff in `../vault-macos-prototype`, including local vault storage, AES-GCM authenticated encryption, Touch ID, recovery keys, auto-lock, Quick Look's temporary decrypted-copy caveat, and the free/Pro limits. Update the privacy page before release if the shipping app adds analytics, crash reporting, cloud sync, or other data practices.
+The copy is based on the Cobolt source and design handoff in `../vault-macos-prototype`, including local vault storage, AES-GCM authenticated encryption, password-wrapped random master keys, Touch ID, recovery keys, auto-lock, integrity checks, encrypted backups, file versions, Restore to original location, Quick Look's temporary decrypted-copy caveat, and the free/Pro limits. Update the privacy page before release if the shipping app adds analytics, crash reporting, cloud sync, or other data practices.
 
 The app icon in `assets/app-icon.png` is the 1024px PNG from `vault-macos-prototype/macOS/Resources/Assets.xcassets/AppIcon.appiconset`.

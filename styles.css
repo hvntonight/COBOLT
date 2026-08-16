@@ -136,6 +136,8 @@ h1 em, h2 em { color: var(--cobalt); font-style: normal; }
 .screenshot-slot { min-height: 360px; display: flex; flex-direction: column; border: 1px dashed rgba(120, 224, 209, .35); border-radius: 16px; background: radial-gradient(circle at 50% 40%, rgba(108, 155, 255, .12), transparent 55%), rgba(8, 12, 17, .6); }
 .screenshot-slot-large { min-height: 460px; }
 .slot-chrome { display: flex; justify-content: space-between; padding: 16px 16px 0; color: #5f7078; font-size: 8px; font-weight: 700; letter-spacing: .12em; }
+.screenshot-image-wrap { display: flex; flex: 1; min-height: 0; align-items: center; justify-content: center; padding: 13px 12px 12px; }
+.screenshot-image-wrap img { display: block; width: 100%; height: auto; max-height: 100%; border: 1px solid rgba(202, 222, 226, .16); border-radius: 10px; box-shadow: 0 18px 42px rgba(0, 0, 0, .34); object-fit: contain; }
 .slot-inner { display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--muted-strong); }
 .slot-icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 17px; border: 1px solid rgba(120, 224, 209, .45); border-radius: 12px; color: var(--cyan); font-size: 23px; font-weight: 300; }
 .slot-icon.lock-symbol { color: var(--cobalt); border-color: rgba(108, 155, 255, .45); }
