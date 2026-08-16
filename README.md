@@ -2,6 +2,8 @@
 
 Static product, support, and privacy pages for the Cobolt macOS app.
 
+The site is English-first. Use the `EN / 中文` control in the header to switch the current page to Chinese; the choice is saved locally in the browser and follows you between the product, privacy, and support pages.
+
 ## Local preview
 
 From this directory, run:
