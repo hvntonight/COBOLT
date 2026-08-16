@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080b10" />
+    <meta name="description" content="Cobolt 支持中心：了解保险箱、解锁、recovery key 和 Cobolt Pro。" />
+    <link rel="canonical" href="https://hvntonight.github.io/COBOLT/support/" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png" />
+    <title>Support — Cobolt</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="document-page">
+    <header class="site-header"><div class="container header-inner"><a class="brand" href="../"><img src="../assets/app-icon.png" alt="" width="38" height="38" /><span>COBOLT</span></a><nav class="site-nav document-nav" aria-label="辅助导航"><a href="../">首页</a><a href="../privacy/">隐私</a><a class="nav-pill" href="../">返回产品页 <span aria-hidden="true">↗</span></a></nav></div></header>
+    <main class="document-main container">
+      <div class="document-hero"><p class="eyebrow"><span class="eyebrow-mark"></span> SUPPORT / 支持</p><h1>需要帮忙？<br /><em>从这里开始。</em></h1><p class="document-lede">Cobolt 的目标是让“放进去、用完、锁上”足够简单。下面是当前 macOS 版本的快速说明。</p><div class="support-contact"><span class="live-dot"></span><span>Support contact</span><a href="https://github.com/hvntonight/COBOLT/issues" rel="noreferrer">在 GitHub Issues 留言 ↗</a></div></div>
+      <div class="support-grid">
+        <article class="support-card support-card-primary"><span class="feature-index">START HERE / 01</span><h2>创建你的第一个 vault</h2><p>创建保险箱并设置一个你能安全保管的密码。启用 recovery key 后，把它放在保险箱之外的安全位置。</p><ol><li><span>01</span>创建本地保险箱</li><li><span>02</span>拖入需要保护的文件</li><li><span>03</span>锁定并确认状态回到 Locked</li></ol></article>
+        <article class="support-card"><span class="feature-index">FAQ / 02</span><h2>常见问题</h2><details open><summary>忘记密码怎么办？</summary><p>如果你启用了 recovery key，请使用它恢复访问。密码和 recovery key 都无法提供时，保险箱内容无法恢复；Cobolt 不保留后门密钥。</p></details><details><summary>文件真的不会上传吗？</summary><p>当前核心工作流在 Mac 本地运行，文件对象、目录和解锁数据不会上传到 Cobolt 云端。购买 Cobolt Pro 时，Apple StoreKit 负责交易。</p></details><details><summary>Quick Look 会不会留下明文？</summary><p>某些系统预览流程可能需要临时解密副本。Cobolt 在锁定或退出时会尽力清理；详细边界见<a href="../privacy/">隐私声明</a>。</p></details><details><summary>Pro 版本多了什么？</summary><p>免费计划包含一个受管理 vault、最多 10 个受保护文件和每个 vault 1GB。Cobolt Pro 移除这些限制，并支持用户选择其他存储位置及高级存储功能。</p></details></article>
+        <article class="support-card support-card-wide"><div><span class="feature-index">CONTACT / 03</span><h2>没有找到答案？</h2><p>在公开留言前，请不要附上密码、recovery key、身份证件或真实文件。描述你的 macOS 版本、Cobolt 版本和不含敏感信息的复现步骤，我们会尽力帮助。</p></div><a class="button button-primary" href="https://github.com/hvntonight/COBOLT/issues" rel="noreferrer">联系 Cobolt 支持 <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <div class="support-note"><img src="../assets/app-icon.png" alt="Cobolt app icon" width="52" height="52" /><div><strong>安全提示</strong><p>密码遗失且没有 recovery key 时，设计上无法恢复保险箱内容。请把 recovery key 当作真正的备份钥匙。</p></div></div>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><img src="../assets/app-icon.png" alt="" width="28" height="28" /><span>COBOLT</span><small>Private files. Protected on your Mac.</small></div><div class="footer-links"><a href="../">Home</a><a href="../privacy/">Privacy</a><a href="https://github.com/hvntonight/COBOLT" rel="noreferrer">GitHub</a></div><div class="footer-meta"><span>Built for macOS</span><span>© <span data-year>2026</span> Cobolt</span></div></div></footer>
+    <script>document.querySelectorAll('[data-year]').forEach((n) => { n.textContent = new Date().getFullYear(); });</script>
+  </body>
+</html>
