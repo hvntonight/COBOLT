@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta id="meta-description" name="description" content="Practical guides to protecting private documents and testing encrypted backups on a Mac." />
+  <link rel="canonical" href="https://hvntonight.github.io/COBOLT/guides/" />
+  <link rel="icon" href="../assets/favicon.png" /><link rel="stylesheet" href="../styles.css" />
+  <script defer src="../script.js"></script><title>Private documents and tested backups — Cobolt</title>
+</head>
+<body class="document-page" data-page="guides">
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../"><img src="../assets/app-icon.png" alt="" width="38" height="38" /><span>COBOLT</span></a>
+    <nav class="site-nav document-nav" aria-label="Navigation"><a href="../" data-i18n="nav.home">Home</a><a href="../support/" data-i18n="nav.support">Support</a><button class="language-toggle" id="language-toggle" type="button" aria-pressed="false" aria-label="Switch to Chinese"><span class="language-current">EN</span><span class="language-slash">/</span><span class="language-other">中文</span></button></nav>
+  </div></header>
+  <main class="document-main container">
+    <div class="guide-en" lang="en">
+      <div class="document-hero"><p class="eyebrow">COBOLT GUIDES</p><h1>Protect documents.<br />Test your backups.</h1><p class="document-lede">Two workflows to try with disposable files before protecting anything important.</p><p class="document-date">October 24, 2026. Basic instructions apply to public 1.0. Candidate-only enhancements are identified below.</p></div>
+      <article class="document-copy">
+        <section id="documents"><h2>Protect private documents without a cloud account</h2><p>Use this for a small collection of tax records, contracts or identity-document copies. Start with a text file containing only fictional information. Do not use your only copy of an important document to learn the workflow.</p>
+          <ol><li>Download Cobolt from the Mac App Store. Choose <strong>Create a vault</strong> and give it a recognizable name, such as Personal Documents.</li><li>Choose a unique, long passphrase and confirm it. Six characters is the minimum, not a recommended security target. Save the recovery key separately; if both credentials are lost, support cannot decrypt the vault.</li><li>Touch ID is optional and configured separately for each vault on each Mac. Keep the password available for a different computer or when biometrics are unavailable.</li><li>Drag in the fictional document or use the file chooser. Keep the original while testing. If you later enable automatic source deletion, first understand the source-file setting and retain a separate backup.</li><li>Search for the file, select it and use Quick Look. Lock the vault and check that the file list disappears. Unlock again with the password.</li><li>Choose <strong>Restore to…</strong> and select a new empty folder. Open the exported file and compare its contents. An existing destination file is not overwritten silently.</li></ol>
+          <p>Files exported or restored outside the vault are ordinary plaintext files. Quick Look and external editors can also create copies. Read the <a href="../security/">security boundaries</a>, and lock your macOS account when leaving the computer.</p>
+        </section>
+        <section id="backups"><h2>A copied vault is not a tested backup</h2><p>A disk failure can destroy an encrypted file just as easily as an unencrypted one. Keep a backup on a separate disk, and prove that you can recover from it before deleting another copy.</p>
+          <ol><li>Finish file imports and external edits. Unlock the vault and open Current Vault settings. Run the integrity check and resolve any reported missing or damaged objects.</li><li>Choose <strong>Encrypted backup</strong> and select a different disk. Preserve the whole <code>.vault</code> directory, not just <code>header.json</code> or an individual encrypted object.</li><li>For a manual check, lock the original and open the backup from a separate test environment or another Mac. Unlock with the same password or recovery key; Touch ID enrollment does not transfer.</li><li>Export a harmless sample into a new empty folder. Open it, compare the text or file hash with the known original, and confirm that the expected files and folders are present.</li><li>Retain the original until the check succeeds. If the backup is damaged, keep both copies and the exact error. Do not overwrite the original with the failed backup.</li></ol>
+          <p>The upcoming candidate adds <strong>Test backup</strong>: choose the backup, authenticate it independently, verify current files, Trash and versions, then export a sample without replacing the active vault. A locked backup is an unverified encrypted copy. Full verification detects corruption; it cannot promise that a disk will not fail tomorrow.</p>
+          <p>The candidate also keeps existing-vault read-only unlock, preview, export and encrypted backup free. Public 1.0 is currently fully unlocked. No subscription or Cobolt account is required.</p>
+        </section>
+      </article>
+    </div>
+    <div class="guide-zh" lang="zh-CN">
+      <div class="document-hero"><p class="eyebrow">COBOLT 使用指南</p><h1>保护私密文档。<br />亲手验证备份。</h1><p class="document-lede">先用不含敏感信息的示例文件，完整走通下面两个流程。</p><p class="document-date">2026 年 10 月 24 日。基础步骤适用于公开 1.0；仅候选版具备的增强功能会单独说明。</p></div>
+      <article class="document-copy">
+        <section><h2>不上传云端，保护 Mac 私密文档</h2><p>适合税务资料、工作合同或证件副本等小规模文件集合。先创建一份只有虚构内容的文本文件，不要用重要文档的唯一副本学习操作。</p>
+          <ol><li>从 Mac App Store 下载 Cobolt，选择<strong>新建保险库</strong>，输入容易识别的名称，例如“个人文档”。</li><li>设置独立、较长的密码并再次确认。六位只是最低长度，不是推荐的安全目标。将恢复密钥单独保存；密码和恢复密钥都丢失时，客服也无法解密。</li><li>触控 ID 为可选功能，按保险库、按 Mac 单独启用。在另一台电脑或指纹暂时不可用时，仍需密码或恢复密钥。</li><li>拖入虚构文档，或使用文件选择器导入。测试期间保留源文件。之后如需自动删除源文件，先确认设置规则，并准备独立备份。</li><li>搜索、选择文件并使用快速查看。锁定保险库，确认文件列表消失，再用密码重新解锁。</li><li>选择<strong>还原到…</strong>，指定一个新的空文件夹。打开导出的文件，与原内容核对；目标位置已有同名文件时，不会无提示覆盖。</li></ol>
+          <p>还原或导出到保险库外的文件属于普通明文；快速查看和外部编辑器也可能产生副本。请了解<a href="../security/">安全边界</a>，离开电脑时也要锁定 macOS 账户。</p>
+        </section>
+        <section><h2>“复制成功”不等于“恢复成功”</h2><p>磁盘损坏也会毁坏加密文件。请将备份存放到另一块磁盘，并在删除其他副本前，实际证明它可以恢复。</p>
+          <ol><li>完成正在导入的任务和外部编辑。解锁保险库，在“当前保险库”设置中运行完整性检查，先处理缺失或损坏的提示。</li><li>选择<strong>加密备份</strong>，指定另一块磁盘。保留完整的 <code>.vault</code> 目录，不要只复制 <code>header.json</code> 或某一个加密对象。</li><li>手动检查时，先锁定原保险库，在独立测试环境或另一台 Mac 打开备份。使用相同密码或恢复密钥解锁；触控 ID 授权不会随文件迁移。</li><li>将一个无敏感内容的样本导出到新的空文件夹。打开文件，比较文字或文件哈希，并核对预期的文件与文件夹是否齐全。</li><li>成功前保留原保险库。如果备份损坏，保留两份数据和具体错误，不要用失败的备份覆盖原件。</li></ol>
+          <p>下一候选版新增<strong>测试备份</strong>：选择备份、独立验证密码或恢复密钥、检查当前文件／废纸篓／历史版本，再导出样本，不替换当前保险库。锁定状态创建的备份只是未经验证的加密副本。完整性验证能发现损坏，但不能保证磁盘以后不会故障。</p>
+          <p>候选版中的已有保险库只读解锁、预览、导出和加密备份始终免费；当前公开 1.0 为完全解锁版。不需要订阅或 Cobolt 账户。</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><span>COBOLT</span></div><div class="footer-links"><a href="../privacy/" data-i18n="footer.privacy">Privacy</a><a href="../support/" data-i18n="footer.support">Support</a><a href="https://apps.apple.com/app/id6801119584?mt=12" data-i18n="nav.download">Download for Mac</a></div><div class="footer-meta">© <span data-year></span> Cobolt</div></div></footer>
+</body></html>

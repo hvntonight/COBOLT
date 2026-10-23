@@ -255,3 +255,11 @@ body.lightbox-open { overflow: hidden; }
   .cta-section { padding-top: 74px; padding-bottom: 74px; }.cta-card { display: block; padding: 30px 24px; }.cta-card h2 { margin-bottom: 35px; font-size: 42px; }.cta-actions { align-items: flex-start; }
   .footer-inner { grid-template-columns: 1fr; gap: 22px; padding-top: 30px; padding-bottom: 30px; }.footer-meta { align-items: start; }.footer-links { order: 3; }
 }
+.hero-product-button { display:block; position:relative; width:100%; padding:0; border:0; background:transparent; cursor:zoom-in; }
+.hero-product-capture { display:block; width:100%; height:auto; object-fit:contain; }
+.cta-note { max-width:390px; line-height:1.7; }
+.security-format { white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; line-height:1.7; background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px; }
+.guide-zh { display: none; }
+html[lang="zh-CN"] .guide-en { display: none; }
+html[lang="zh-CN"] .guide-zh { display: block; }
+[data-page="guides"] .document-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; }
