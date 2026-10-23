@@ -55,4 +55,3 @@ The recovery CLI uses the same VaultCore code as the app. Verify a copied vault,
 - Concurrent writes from two app instances or devices, rollback attacks using an older valid vault copy, cloud conflict merging, secure sharing of the recovery key, and independent cryptographic audit remain separate concerns. This app does not implement cloud synchronization, multi-user permissions or an anti-rollback server.
 
 Apple references: [CryptoKit](https://developer.apple.com/documentation/cryptokit), [AES.GCM](https://developer.apple.com/documentation/cryptokit/aes/gcm), [Vision text recognition](https://developer.apple.com/documentation/vision/vnrecognizetextrequest). Source of truth: `CryptoEngine.swift`, `ChunkCipher.swift`, `Models.swift` and `VaultService.swift`.
-
